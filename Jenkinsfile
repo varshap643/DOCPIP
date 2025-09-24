@@ -10,9 +10,9 @@ pipeline {
         stage('Run') { 
             steps { 
                 echo "Run application in Docker Container" 
-                bat "docker rm -f mycontainer || exit 0" 
+                bat "docker rm -f mycontainer1 || exit 0" 
                      
-                bat "docker run -d -p 5000:5000 --name mycontainer pyflsk" 
+                bat "docker run -d -p 5000:5000 --name mycontainer1 pyflsk" 
             } 
         } 
     } 
